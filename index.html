@@ -2,20 +2,28 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>address</title>
+        <title>住所検索サイト</title>
         <link rel="stylesheet" href = "css/style.css">
-        <script type = "text/javascript" src="js/index.js"></script>
+        <script type = "module" src="js/index.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="https://rawgit.com/kimmobrunfeldt/progressbar.js/master/dist/progressbar.min.js"></script>
     </head>
+
+<div id="splash">
+    <div id="splash_text"></div>
+</div>
 
 
 <div id="app">
+    <h1>住所検索app</h1>
+
     <form>
         <table>
             <tbody>
                 <tr>
                     <th>郵便番号</th>
                     <td>
-                        <input id="input" class="zipcode" type="text" name="zipcode" value="" placeholder="例)8120012">
+                        <input id = "zipcode" type="text" value="" placeholder="ハイフンなし7桁">
                         <button id="search" type="button">住所検索</button>
                         <p id="error"></p>
                     </td>
@@ -23,21 +31,42 @@
 
                 <tr>
                     <th>都道府県</th>
-                    <td><input id="address1" type="text" name="address1" value=""></td>
+                    <td><input id="address1" type="text" value=""></td>
                 </tr>
 
                 <tr>
                     <th>市区町村</th>
-                    <td><input id="address2" type="text" name="address2" value=""></td>
+                    <td><input id="address2"type="text" value=""></td>
                 </tr>
 
                 <tr>
                     <th>町域</th>
-                    <td><input id="address3" type="text" name="address3" value=""></td>
+                    <td><input id="address3" type="text" value=""></td>
+                </tr>
+
+                <tr>
+                    <th>都道府県名カナ</th>
+                    <td><input id="kana1" type="text" value=""></td>
+                </tr>
+
+                <tr>
+                    <th>市区町村名カナ</th>
+                    <td><input id="kana2" type="text" value=""></td>
+                </tr>
+
+                <tr>
+                    <th>町域名カナ</th>
+                    <td><input id="kana3" type="text" value=""></td>
                 </tr>
             </tbody>
         </table>
     </form>
+
+    <footer>
+        <p>APIの取得先<a href="http://zipcloud.ibsnet.co.jp/doc/api" target="_blank">zipcloud様</a>です。</p>
+        <p>このサイトは<a href="https://into-the-program.com/javascript-get-address-zipcode-search-api/">ryohei様</a>と<a href="https://coco-factory.jp/ugokuweb/move01/4-1-2/">動くWebデザインアイデア帳様</a>を参考に作成しています。</p>
+        <p>© 2023 <a href="https://github.com/kinakomoch7">kinakomoch7</a> All rights reserved</p>
+    </footer>
 </div>
 
 </html>
