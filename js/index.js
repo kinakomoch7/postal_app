@@ -1,4 +1,4 @@
-var bar = new ProgressBar.Line(splash_text, {//id名を指定
+var bar = new ProgressBar.Line(splash_text, {
 	easing: 'easeInOut',
 	duration: 1500,
 	strokeWidth: 0.2,
@@ -23,7 +23,7 @@ var bar = new ProgressBar.Line(splash_text, {//id名を指定
 	}
 });
 
-//アニメーションスタート
+
 bar.animate(1.0, function () {
 	$("#splash").delay(500).fadeOut(800);
 });  
